@@ -1,0 +1,49 @@
+.md-raised{
+	height: 40px; margin: 20px 0 0 15px;
+};
+body{
+    font-family: RobotoDraft,Roboto,'Helvetica Neue',sans-serif;
+
+}
+
+
+.mainBox {
+    padding-top: 30px;
+}
+
+
+.history{
+      text-align: center;
+      background-color: #00BBA8;
+      height: 40px;
+      padding-top: 10px;
+      font-weight: lighter;
+        margin-top: 0;
+}
+
+
+/*
+About Page*/
+body{
+    font-family: RobotoDraft,Roboto,'Helvetica Neue',sans-serif;
+
+}
+
+.heading{
+    color: #448aff;
+    text-align: center;
+}
+
+.md-display-1{
+    font-weight: lighter;    
+}
+
+
+.md-toolbar-tools {
+    box-shadow: 0px 14px 15px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+}
+.quizApp {
+    padding: 30px;
+}
