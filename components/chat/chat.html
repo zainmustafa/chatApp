@@ -1,0 +1,46 @@
+<div style="margin-top: 100px" layout='row' ng-controller="ChatController as chat">
+    <div flex='15'></div>
+    <div flex='10'>
+        Online Friends!!<br>
+        <div ng-repeat="user in chat.users">
+            <img ng-click="chat.msgNode($index)" ng-src="{{user.imgUrl}}" style="border-radius: 50%;width: 50%;"> </br>{{user.name}}
+        </div>
+    </div>
+    <div flex='50'>
+        <md-whiteframe class="md-whiteframe-z2" layout layout-align="center center">
+            <div layout="column" layout-fill>
+                <div><h3 class="history">{{chat.chatWalyKaNaam}}</h3></div>
+                <md-content style="height: 300px; width: 526px; margin-left: 50px;">
+                    <md-list>
+                        <md-list-item class="md-3-line" ng-repeat="item in chat.message">
+                            <!-- <img ng-src="./images/ic_send_24px.svg" alt="{{item.name}}" class="md-avatar"> -->
+                            <div class="md-list-item-text">
+                                <h4>{{item.sendFrom}}</h4>
+
+                                <p style="margin-left: 20px">
+                                    {{item.message}}
+                                </p>
+                            </div>
+                            <md-divider inset></md-divider>
+                        </md-list-item>
+                    </md-list>
+                </md-content>
+            </div>
+        </md-whiteframe>
+        <div layout='row'>
+            <div flex='20'></div>
+            <div flex='60'>
+                <!-- Message -->
+                <div layout="row">
+                    <md-input-container style="width: 300px;">
+                        <label>Message: </label>
+                        <input type="text" ng-model="chat.myMessage" required md-maxlength="50"
+                               ng-keypress="chat.call($event)">
+                    </md-input-container>
+                </div>
+            </div>
+            <div flex='20'></div>
+        </div>
+    </div>
+    <div flex='25'></div>
+</div>
